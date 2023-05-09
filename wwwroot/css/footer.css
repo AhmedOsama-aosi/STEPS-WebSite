@@ -1,0 +1,158 @@
+.footer{
+    background-image:url(../images/Footer\ background.png); 
+ /*  background-color: #030303;*/
+    background-repeat: no-repeat;
+    width: 100%;
+  margin-top: 100px;
+}
+
+.dfooter1{
+    margin: 50px;
+   margin-left: 10%;
+ 
+}
+    .dfooter1 h2 {
+        margin-left: 5%;
+        padding: 10px;
+       
+        font-size: 40px;
+    }
+.dfooter1 p{
+    color: #faf5f5;
+   width: 80%;
+   font-size: 18px;
+   
+    padding: 10px;
+    margin-left: 5%;
+
+}
+
+.inputfoo ul li{
+    list-style: none;
+}
+.dfooter1 .inpfooter{
+    margin: 5px;
+  
+
+  width: 60%;
+  display: block;
+    float: left;
+    
+}
+.inputsubmit{
+    
+    margin: 5px;
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+}
+.iconfooter{
+  margin-top: 30px;  
+  margin-left: 5%;
+}
+.iconfooter a i{
+   
+  padding: 14px;
+  font-size: 25px;
+  color: #fcfcfc;
+  
+  
+}
+.iconfooter a i:hover{
+    color: #fad21e;
+   
+}
+.dfooter2{
+    margin-top: 80px;
+   /* margin-left: 5%; */
+}
+.dfooter2 a:hover{
+    color: #f5cd1b;
+    text-decoration: underline;
+}
+.dfooter2 ul li {
+    list-style: none;
+    font-size: 18px;
+    
+   
+    padding: 2px;
+    
+}
+.dfooter2 ul li a{
+text-decoration: none;
+     color: #d4d4d4;
+}
+.lastlink{
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+.lastlink a{
+    margin-top: 40px;
+    margin-left: 4%;  
+    font-size: 17px;
+    width: 100%;
+    text-decoration: none;
+     color: #d4d4d4;
+      
+}
+.Copyright{
+    text-align: center; 
+     margin-top: 20px;
+     margin-bottom: 20px;
+     
+}
+.Copyright a{
+    margin-left: 10%;
+    font-size: 18px;
+    text-decoration: none;
+    color: #d4d4d4;
+   
+ 
+}
+  
+
+
+@media (max-width:1200px){
+    .element1{
+            margin-left:50px;
+        }
+    }
+    @media (max-width:992px){
+        .element1{
+        margin-left:5px;
+    }
+    .element2{
+        margin-top: 7px;
+        padding:0px 40px;
+        margin:auto;
+    }
+   
+
+    }
+   
+    
+@media (max-width:771px) {
+    .dfooter1{
+       float: none;
+       margin: 30px;
+    }
+    .dfooter2{
+        padding-top: 20px;
+        margin: 10px;
+    }
+    .dfooter1 .inpfooter{
+        margin: 0px;
+      /*  width: 300px; */
+      width: 90%;
+        display: inline;
+        
+    }
+    .Copyright{
+        margin-top: 50px;
+        text-align: center;
+        
+   }
+ 
+    }

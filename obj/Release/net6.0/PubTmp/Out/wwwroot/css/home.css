@@ -1,0 +1,284 @@
+
+.header{
+    background-image: linear-gradient(rgba(0,0,0,7),rgba(0, 0, 0, 0.1)),url(../images/Image\ 1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;  
+     
+  
+
+}
+.header .content{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    text-align: center;
+}
+.header .content h1{
+    color: #fff;
+    font-size: 40px;
+}
+.header .content p{
+    color: #fff;
+    font-size: 25px;
+}
+
+.header .content button{
+  
+    /*padding: 18px 20px;*/
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    color: #cca000;
+}
+.help{
+    text-align: center;
+    margin: 30px 0px;
+}
+
+/*.section2{
+ 
+    margin: auto; 
+  margin-top: 10px;
+   
+}*/
+.dhome {
+    width: 380px;
+    height: 320px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+    border-radius: 15px;
+    margin: 30px;
+}
+.img1{
+    width: 150;
+    height: 150px;
+     margin: 20px;
+    margin-left: 50px;
+  
+}
+.dhome p{
+    text-align: center;
+    
+   padding: 10px;
+   word-spacing: 2px;
+}
+.ah1{
+   text-decoration: none; 
+   margin-top: 4%;
+   margin-left: auto;
+   margin-right: 30px;
+   display:block;
+   color: black;
+   font-weight: bold;
+}
+.carousel1{
+ background-image:url(../images/carsole.jpg);
+ 
+ 
+ width: 100%;
+ margin-top: 80px;
+ margin-bottom: 50px;
+ padding: 30px;
+ height: 380px;
+}
+.carsimg {
+    margin: auto;
+    width: 30%;
+    height: 250px;
+    margin-top: 36px;
+    border-radius: 15px;
+}
+.carousel1 p{
+    font-size: 19px;
+    color: #fffbfb;
+    text-align: center;
+    padding: 10px;
+}
+.carousel1 button span{
+   
+   width: 100px;
+   height: 100px;
+
+}
+.serviced1{
+   
+ 
+   margin: auto;
+
+ margin-bottom: 50px;
+ 
+}
+.serviced1 img{
+    margin: auto;
+    width: 170px;
+    height: 170px;
+    
+}
+.serviced1 p{
+  width: 150px;
+    text-align: center;
+    margin: auto;
+}
+.sec5{
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+   }
+   .img8{
+    
+    width: 66%;
+    height: 370px;
+    float: left;
+    clip-path: ellipse(90% 330px at 10% 21%);  /* 600px */
+    
+   }
+.cerf {
+    background-color: rgb(255, 217, 49);
+    width: 100%;
+    height: 370px;
+}
+   .cerf2{
+     clip-path: ellipse(88% 310px at 10% 21%);
+    background-color: rgb(255, 255, 255); 
+    
+    width: 100%;
+    height: 370px;
+   }
+  
+   .secp{
+    background-color: black;
+   
+    color: aliceblue;
+    width: 100%;
+    height: 370px;
+    margin: auto;
+   }
+    .secp h1 {
+        padding-top: 50px;
+        margin-left: 68%;
+        width: 300px;
+        font-weight: bold;
+        color: rgb(255, 217, 49);
+        font-size: 35px;
+    }
+   .secp p{
+    width: 90%;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 20px;
+    
+   }
+   .cerousel2{
+    width: 73%;
+    height: 350px;
+    
+   
+    
+   }
+   .cerbtn{
+    margin-bottom: -200px;
+   }
+  
+
+   .cerimg{
+    width: 90%;
+    height: 300px;
+    margin: auto;
+   }
+
+
+/*  */
+@media (max-width:992px) {
+    .secp h1{
+        padding-top: 40px;
+      
+         width: 92%;
+         font-weight: bold;
+         color: rgb(255, 217, 49);
+         font-size: 29px;
+         
+        }
+        .secp p{
+         width: 95%;
+         font-size: 19px;
+         font-weight: 500;
+         padding: 20px;
+         
+        }
+  }
+@media (max-width:767px){
+    .carousel1 button span{
+        /* font-size: 29px;  */
+        width: 70px;
+        height: 70px;
+     
+     }
+     .carsimg{
+        margin: auto;
+          width: 300px;
+          height: 250px;
+      }
+      .cerousel2{
+        width: 73%;
+        height: 330px;
+        
+       
+        
+       }
+      .secp h1{
+        padding-top: 30px;
+       padding-left: 10px;
+         width: 99%;
+         font-weight: bold;
+         color: rgb(255, 217, 49);
+         font-size: 22px;
+         
+        }
+        .secp p{
+         width: 99%;
+         font-size: 19px;
+         font-weight: 500;
+         padding: 19px;
+         
+        }
+        .cerimg{
+            width: 99%;
+            height: 280px;
+            margin: auto;
+           }
+}
+
+
+@media (max-width:350px){
+    .header .content h1,p{
+        font-size: 15px;
+    }
+    .header .content button{
+        padding: 10px 10px;
+       
+        font-size: 10px;
+    }
+    .img1{
+        width: 130px;
+        height: 100px;
+         margin: 20px;
+        margin-left: 50px;
+      
+    }
+   /* .section2{
+        margin-left: 3%;
+       
+    } */
+    .dhome{
+         width: 250px;
+         height: 290px;
+        margin: 10px;
+        
+    }
+
+}

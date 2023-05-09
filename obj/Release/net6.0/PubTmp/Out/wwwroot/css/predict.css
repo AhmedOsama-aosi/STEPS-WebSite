@@ -1,0 +1,173 @@
+.predectpage{
+    margin-left: 180px;
+    
+}
+.hp1{
+  
+    margin-top: 40px;
+    margin-left: 14%;
+}
+.hp2{
+
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.mcell{   
+   margin-left: 14%;
+}
+.dcell {
+    width: 40%;
+    margin-bottom: 15px;
+    height: 40px;
+    color: rgb(53, 53, 53);
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+}
+.dsystem{ 
+    
+ 
+ 
+    display: inline-block;
+    display: flex;
+   
+margin: auto;
+}
+.centdiv{
+    margin-left: 300px;
+}
+.dcell2 {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 71%;
+    height: 40px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+}
+ .tabs{
+    display: flex;
+    list-style: none;
+    
+     margin: auto;
+ 
+ }
+    .tabs li {
+        font-size: 20px;
+        color: black;
+        border: 2px solid rgba(255, 255, 255, 0);
+        box-shadow: 1px 4px 8px rgb(183, 183, 183);
+        border-radius: 15px;
+        width: 39%;
+        padding: 3px;
+        margin: 8px;
+        text-align: center;
+        cursor: pointer;
+    }
+.tback {
+    width:70%;
+    margin:20px auto;
+    border-radius: 15px;
+    height:fit-content;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+}
+.table12 {
+   width:90%;
+  margin:30px auto;
+   text-align: center;
+   
+}
+.active2, .tabs li:hover {
+    background-color: #ffc107;
+}
+.tcontent >div:not(:first-child){
+    display: none;
+}
+
+@media (max-width:768px){ 
+ 
+.hp1{
+    margin-left: 10px;
+    font-size: 23px;
+}
+
+
+.dsystem{
+   margin-left: 2px;
+   display: inline;
+   margin-bottom: 0px;
+}
+.dcell{
+  
+   margin-bottom:0px;
+   margin-top: 0px;
+    width: 80%;
+ height: 35px;
+font-size: 17px;}
+.dm1{
+    margin-top: 20px;
+}
+.dcell2{
+   
+    margin-bottom: 15px;
+     width: 73%;
+     height: 35px;
+    font-size: 18px;
+}
+.tabs{
+    margin-left: 6px;
+ /* margin: auto;*/
+ } 
+ .table12{
+    width: 80%; }
+}
+@media (min-width:768px) and (max-width:992px){ 
+
+.dsystem{
+   margin-left: 2px;
+   display: inline;
+}
+.dcell{
+    display: inline-block;
+    
+   margin-bottom: 20px;
+   width: 80%;
+  
+}
+.tabs{
+    margin-left: 50px;
+ } 
+}
+@media (min-width:992px) and (max-width:1200px){ 
+
+.dcell{
+ 
+ width: 42%;
+    font-size: 18px;
+}
+.tabs{
+    margin-left: 130px;
+ }
+}
+@media (min-width:1200px){ 
+ .predectpage{
+    margin-left: 230px;
+}
+.dcell{
+  
+  width: 40%;
+    font-size: 18px;
+}
+.tabs{
+    margin-left: 170px;
+ }
+}

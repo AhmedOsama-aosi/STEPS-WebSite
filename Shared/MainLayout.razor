@@ -1,0 +1,207 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavManager
+@inject LoginController LoginController
+@inject IJSRuntime jsRuntime
+
+<PageTitle>STEPS</PageTitle>
+
+
+
+
+
+<div style="width:100%;height:150%; background-color:black; z-index: 8;opacity: 0.2; position: fixed;display:@(display?"block":"none")">
+</div>
+
+<div style="width:35%;height:70%;background-color:white;margin:0px auto;display: @(display?"flex":"none");
+  position: fixed;
+ top:20%;
+  left:32.5%;
+  border: 3px solid #f1f1f1;
+    flex-direction: column;
+border-radius:30px;
+  z-index: 9;">
+  @if (login)
+    {
+        <h2 style="position:relative; margin:10% auto 0px auto;">Log in to link your system details</h2>
+        <h2 style="position:relative; margin:1% auto 50px auto;">and access other features</h2>
+        <input type="text" class="inp1" placeholder="Email" style="position:relative; margin:1% auto" @bind-value=@email />
+        <input class="inp1" type="password" placeholder="Password" style="position:relative; margin:1% auto 10% auto;" @bind-value=@password />
+
+        <button @onclick=@check_login class="btn default" style="position:relative; width: 150px;margin: 0.5% auto; background-color:#ffc107;font-weight:bold;border-radius:15px;">Login</button>
+        <button @onclick=@loginpage class="btn default" style="position:relative; width: 100px;margin: 0.5%  auto;background-color:black;color:white;font-weight:bold;border-radius:15px;">signup</button>
+    }else{
+        <h2 style="margin:50px auto 0px auto;">sign in to link your system details</h2>
+        <h2 style="margin:10px auto 50px auto;">and access other features</h2>
+        <input class="inp1" type="email" placeholder="Email" style="margin:10px auto" @bind-value=@email  />
+        <input  class="inp1" type="password" placeholder="Password" style="position:relative; margin:10px auto 50px auto;" @bind-value=@password/>
+
+        <button @onclick=@loginpage class="btn default" style="position:relative; width: 100px;margin: 5px auto;background-color:black;color:white;font-weight:bold;border-radius:15px;">signup</button>
+    }
+   
+    <button @onclick=@loginpage class="btn default" style="width: fit-content;margin:auto auto 2% 40px; font-weight:bold; position:relative;">back</button>
+</div>
+<div>
+<nav class="nav1  ">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+      
+    <label class="logo text-warning">STEPS</label>
+    <ul class="element4 menu1">
+        <li><a class="link1 active" href="">Home</a></li>
+        <li><a class="link1" href="Products">Products</a></li>
+        <li><a class="link1" href="articles">Articles</a></li>
+        <li><a class="link1" href="">About us</a></li>
+
+@*        <li> <button type="button" class="btn btn-warning fs-5 element3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Log in</button></li>
+        *@
+        <li>
+            @if(Models.User.theUser!=null)
+            {
+                  
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-warning fs-5 element3" style="color: black" @onclick=@Account>
+                            @Models.User.theUser.Name
+                        </button>
+                        <div class="dropdown-content">
+                            <a style="height:80px" @onclick=@logout>Logout</a>
+                           
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <button type="button" class="btn btn-warning fs-5 element3" style="color: black" @onclick=@loginpage>
+               @* <a style="color: black !important;" href="Account">Log in</a>*@
+                    Log in
+                </button> 
+                }
+                
+        </li>
+    </ul>
+</nav><!--end nav-->
+
+    <main>
+        @Body
+    </main>
+</div>
+<footer class="footer">
+    <!--footer-->
+    <section class="container-fluid row">
+        <div class="col-sm">
+            <div class="dfooter1 ">
+                <h2 class="text-warning">STEPS</h2>
+                <p>subscribe to get latest news about our products and services</p>
+                <div class="inputfoo">
+                    <ul>
+                        <li>
+                            <input type="email" class="form-control inpfooter" id="email" placeholder="email">
+                        </li>
+                        <li> <input class="submit inputsubmit bg-warning" type="submit" value="subscribe"></li>
+                    </ul>
+                </div>
+                <div class="iconfooter">
+                    <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="dfooter2 col-sm">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <ul>
+                            <li><a href="#">products</a></li>
+                            <li><a href="#">Articles</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Term and conditions</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class=" col">
+                    <ul>
+                        <li> <a href="#">log in</a></li>
+                        <li><a href="#">sign up</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lastlink"> <a href="#"><i class="fa-solid fa-location-dot text-warning  fs-3 "></i>  Egypt,Mansoura city</a></div>
+        </div>
+
+
+
+
+        <section class="Copyright">
+            <a href="#" class="text-center">Copyright ⓒ2023 All rights reserved</a>
+        </section>
+
+
+    </section>
+
+</footer>
+
+@code{
+    bool display = false;
+    bool login = true;
+    string password  { get; set; }
+    string email { get; set; }
+    void loginpage()
+    {
+        display = !display;
+    }
+    void Account()
+    {
+        NavManager.NavigateTo("Account");
+    }
+    void logout()
+    {
+        Models.User.theUser = null;
+        NavManager.NavigateTo("/");
+    }
+    void signup_show()
+    {
+        login = !login;
+    }
+    void check_login()
+    {
+        try
+        {
+            //if (LoginController.login(email: email, pass: password))
+            //{
+            //    display = !display;
+            //    email = "";
+            //    password = "";
+            //    NavManager.NavigateTo("Account");
+
+            //}
+            display = !display;
+            email = "";
+            password = "";
+            Models.User user = new User();
+            user.Name = "Ahmed";
+            user.Phone = "01200495294";
+            user.Address = "Mans";
+
+            Models.User.theUser = user;
+            NavManager.NavigateTo("Account");
+
+        }
+        catch (Exception)
+        {
+            
+           
+        }
+     
+       
+    }
+
+  
+}

@@ -1,0 +1,231 @@
+.hprofile{
+    
+    text-align: center;
+    margin-top: 40px;
+
+}
+.sectionprofile1{
+   /* width: 80%;  */
+    margin: auto;
+    margin-top: 50px;
+    
+}
+.updatebtn{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 10%;
+}
+.dprofile1 {
+    margin: auto;
+    width: 75%;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    /* shadow */
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+    border-radius: 15px;
+}
+.dname{
+   
+   float: left;
+   margin-right: 25px;
+}
+.dprofile1 div{
+    margin: 0px;
+}
+.dprofile1 i{
+    font-size: 90px;
+    color: #9c9c9c;
+   margin-left: 30px;
+}
+.dprofile2{
+   text-align: center;
+   margin-left: 20px;
+}
+.dselect{
+    font-size: 20px;
+    margin-left: 25% ;
+}
+
+.dprofile2 .select1{
+    width: 140px;
+    height: 30px;
+    margin-left: 5px;
+    border: none;
+    font-weight: bold;
+}
+.dcell5 {
+    margin-bottom: 15px;
+    width: 41%;
+    height: 40px;
+    color: rgb(53, 53, 53);
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+}
+.dsystem2{
+  margin: auto;
+ 
+    display: inline-block;
+    display: flex;
+   
+
+}
+.mcel{
+    margin-left: 11%;
+}
+.hprof{
+    margin-left: 13%;
+    margin-top: 30px;
+}
+.dcell4 {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 74%;
+    height: 40px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    /* border:2px solid rgb(161, 160, 158);  */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 4px 8px rgb(183, 183, 183);
+}
+
+ .dprofile3{
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 50px;
+ }
+ .dselect2{
+     font-size: 20px;
+     margin-left: 17% ;
+ }
+ 
+ .dprofile3 .select2{
+     width: 140px;
+     height: 30px;
+     margin-left: 5px;
+     border: none;
+     font-weight: bold;
+ }
+
+ .chart1{ margin: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    color: #000; 
+  
+   font-size: 20px;
+    width: 60%;
+    /* height:600px ;  */
+  } 
+ .btnpred{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 100px;
+ }
+
+
+
+
+
+
+@media(max-width: 998px){
+    .dprofile1 i{
+       display: none;
+    }
+    .dprofile1{
+        margin: auto;
+        width: 80%;
+        font-size: 15px;
+    } 
+    .dprofile2{
+        text-align: center;
+        margin-left: 30px;
+        margin-top: 20px;
+        
+     }
+     .dprofile3 h2{
+        font-size: 18px;
+     }
+     .dselect{
+         font-size: 20px;
+         margin-left: 5% ;
+         
+     }
+     
+     .dprofile2 .select1{
+         width: 120px;
+         height: 30px;
+         margin-left: 5px;
+         border: none;
+         font-weight: bold;
+     }
+    .dsystem2{
+        margin-left: 2px;
+        display: inline;
+        margin-bottom: 0px;
+     }
+    .dcell5{
+          margin: auto;
+        margin-bottom: 0px;
+        width: 80%;
+        /* width: 380px; */
+         height: 40px;
+    }
+    .marg{
+        margin-bottom: 18px;
+    }
+    .hprof{
+        margin-left: 9%;
+        margin-top: 20px;
+    }
+    .dcell4{
+       
+         width: 80%;
+         height: 40px;
+         padding: 5px;
+         
+     }
+     
+     .dprofile3{
+        text-align: center;
+       margin-left: 5%;
+       margin-bottom: 50px;
+     }
+     .dprofile3 h2{
+        font-size: 18px;
+        text-align: center;
+     }
+     .dselect2{
+         font-size: 20px;
+         margin-left: 2% ;
+     }
+     
+     .dprofile3 .select2{
+         width: 120px;
+         height: 30px;
+         margin-left: 5px;
+         border: none;
+         font-weight: bold;
+
+     }
+
+     .chart1{ 
+        width: 90%;
+       
+      } 
+      .btnpred{
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 100px;
+     }
+
+}
+

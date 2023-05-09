@@ -1,0 +1,89 @@
+﻿@page "/Products/Residental"
+@*<img src="images/title.png"  height="350" style=" display: block; margin:0px auto;width:100%;" >*@
+
+<section class="header2">
+	<div class="content2">
+		<h1>solor panels for home owners</h1>
+	</div>
+</section><!--end header-->
+
+
+<div style="position:relative;">
+	<img src="images/off grid.png"  height="1000" style=" display: block; margin:40px auto;width:80%;" >
+	<div style="position: absolute;bottom:0px;left:0px;right:0px;top:480px ">
+	<div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+	<img src="@imagesoursce" width="800" height="450" style="border-radius:20px" />
+</div>
+<div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin:20px">
+			<div class='@(offGridDot==1?"btnactive":"") dots' data-cont1=".one"  @onclick='()=>electrityusing(1)'></div>
+			<div class='@(offGridDot==2?"btnactive":"") dots' data-cont1=".one" @onclick='()=>electrityusing(2)'></div>
+			<div class='@(offGridDot==3?"btnactive":"") dots' data-cont1=".one" @onclick='()=>electrityusing(3)'></div>
+</div>
+</div>
+</div>
+
+
+
+<div style="position:relative;">
+	<img src="images/on grid.png"  height="1000" style=" display: block; margin:40px auto;width:80%;" >
+	<div style="position: absolute;bottom:0px;left:0px;right:0px;top:480px ">
+	<div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+	<img src="@imagesoursce2" width="800" height="450" style="border-radius:20px" />
+</div>
+<div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin:20px">
+			<div class='@(onGridDot==1?"btnactive":"") dots' data-cont1=".one" @onclick='()=>onGridCases(1)'></div>
+			<div class='@(onGridDot==2?"btnactive":"") dots' data-cont1=".one" @onclick='()=>onGridCases(2)'></div>
+			<div class='@(onGridDot==3?"btnactive":"") dots' data-cont1=".one" @onclick='()=>onGridCases(3)'></div>
+</div>
+</div>
+</div>
+
+@code {
+	string imagesoursce { get; set; }
+	string imagesoursce2 { get; set; }
+	int offGridDot { get; set; }
+	int onGridDot { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		imagesoursce = "images/off-grid-1.png";
+		imagesoursce2 = "images/on-grid-1.png";
+		offGridDot = 1;
+		onGridDot = 1;
+		//NavManager.NavigateTo("page2");
+	}
+	private void electrityusing(int i)
+	{
+		if (i == 1)
+		{
+			imagesoursce = "images/off-grid-1.png";
+		}
+		else if(i == 2)
+		{
+			imagesoursce = "images/off-grid-2.png";
+		}
+		else if (i == 3)
+		{
+			imagesoursce = "images/off-grid-3.png";
+		}
+		offGridDot = i;
+
+	}
+	private void onGridCases(int i)
+	{
+		if (i == 1)
+		{
+			imagesoursce2 = "images/on-grid-1.png";
+		}
+		else if (i == 2)
+		{
+			imagesoursce2 = "images/on-grid-2.png";
+		}
+		else if (i == 3)
+		{
+			imagesoursce2 = "images/on-grid-3.png";
+		}
+		onGridDot = i;
+
+	}
+}

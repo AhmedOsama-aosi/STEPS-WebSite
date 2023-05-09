@@ -1,0 +1,211 @@
+/* _content/StepsWebApp/Pages/AllArticles.razor.rz.scp.css */
+.artd[b-kbv0l0r9gs]{
+    margin-top: 40px ;
+}
+.arth[b-kbv0l0r9gs]{
+    text-align: center;
+    
+}
+.article1[b-kbv0l0r9gs]{
+    margin: auto;
+  
+  width: 60%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  
+    box-shadow:1px 1px 1px 1px rgb(160, 160, 158);
+    border-radius: 15px;
+}
+
+.artp[b-kbv0l0r9gs]{
+    width: 95%;
+  padding: 10px;
+  margin-left: 5px;
+}
+.ap[b-kbv0l0r9gs]{
+   
+    font-size: 18px;
+}
+.daimg[b-kbv0l0r9gs]{
+    border-radius: 30px;
+    overflow: hidden;
+}
+.aimg[b-kbv0l0r9gs]{
+  width: 100%;
+  transition: .4s;
+}
+.aimg:hover[b-kbv0l0r9gs]{
+    transform: scale(1.2);
+    
+}
+.aa1[b-kbv0l0r9gs]{
+    text-decoration: none; 
+    
+    font-size: 18px;
+    color: black;
+   
+   font-weight: 500;
+    position: relative;
+    top: 0px;
+    left: 80%;
+    bottom: 10px;
+} 
+
+@media(max-width: 767px){
+    .article1[b-kbv0l0r9gs]{
+        margin: auto;
+        text-align: center;
+        width: 400px; 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .aa1[b-kbv0l0r9gs]{
+        position: relative;
+        top: 10px;
+        left: 5px;
+    }
+    .ap[b-kbv0l0r9gs]{
+        float: none;
+        font-size: 15px;
+    }
+    .aimg[b-kbv0l0r9gs]{
+       
+       width: 100%;
+        height: 200px;
+    }
+}
+/* _content/StepsWebApp/Shared/MainLayout.razor.rz.scp.css */
+.page[b-5g058jjxle] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-5g058jjxle] {
+    flex: 1;
+}
+
+.sidebar[b-5g058jjxle] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-5g058jjxle] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-5g058jjxle]  a, .top-row .btn-link[b-5g058jjxle] {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+    }
+
+    .top-row a:first-child[b-5g058jjxle] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-5g058jjxle] {
+        display: none;
+    }
+
+    .top-row.auth[b-5g058jjxle] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-5g058jjxle], .top-row .btn-link[b-5g058jjxle] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-5g058jjxle] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-5g058jjxle] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-5g058jjxle] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-5g058jjxle], article[b-5g058jjxle] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* _content/StepsWebApp/Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-gojmmou3ib] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-gojmmou3ib] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-gojmmou3ib] {
+    font-size: 1.1rem;
+}
+
+.oi[b-gojmmou3ib] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-gojmmou3ib] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-gojmmou3ib] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-gojmmou3ib] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-gojmmou3ib]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-gojmmou3ib]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-gojmmou3ib]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-gojmmou3ib] {
+        display: none;
+    }
+
+    .collapse[b-gojmmou3ib] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}

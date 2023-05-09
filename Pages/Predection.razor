@@ -1,0 +1,143 @@
+﻿@page "/Predection"
+
+@*<img src="images/prediction.png" width="900" height="1800" style="margin:100px auto; display:block;" />
+*@
+
+
+<section class=" container ">
+    <h1 class="hp1" style="margin:0px auto; width:fit-content;">Predict the energy produced for your system </h1>
+
+
+</section>
+
+<section class="container">
+
+    <div class=" float-sm-none mcell">
+        <h1 class="hp2 ">Your info</h1>
+        <div class="dsystem ">
+            <div class="dcell" data-aos="fade-down">Roof space: <spam>12</spam> m<sup>2</sup>  </div>
+            <div class="dcell dm1" data-aos="fade-down">Yuor location: <spam>12</spam>  </div>
+        </div>
+        <div class="dsystem mcell" data-aos="fade-down">
+            <div class="dcell">electric bill: <span>12</span> L.E</div>
+        </div>
+    </div>
+</section><!--end of yuor info-->
+
+
+<section class="container ">
+
+    <div class=" float-sm-none mcell">
+        <h1 class="hp2 ">Your system</h1>
+        <div class="dsystem ">
+            <div class="dcell" data-aos="fade-down">cell type: <span>12</span> </div>
+            <div class="dcell dm1" data-aos="fade-down">install type: </div>
+        </div>
+
+        <div class="dsystem ">
+            <div class="dcell" data-aos="fade-down">space required: m<sup>2</sup> </div>
+            <div class="dcell dm1" data-aos="fade-down">Panels count: panel</div>
+        </div>
+
+        <div class="dsystem ">
+            <div class="dcell " data-aos="fade-down">system age: </div>
+
+        </div>
+    </div>
+</section><!--end of system-->
+
+<div class="container ">
+    <h1 class="hp2 mcell ">Battery</h1>
+    <div>
+        <div class=" ">
+            <div class="dcell2 " data-aos="zoom-in">Total Ampere: Amp</div>
+
+        </div>
+        <div class=" ">
+            <div class="dcell2" data-aos="zoom-in">battery capacity: Amp</div>
+        </div>
+
+        <div class=" ">
+            <div class="dcell2" data-aos="zoom-in">total numbwr of battery: battery</div>
+        </div>
+
+        <div class=" ">
+            <div class="dcell2" data-aos="zoom-in">battery age: </div>
+        </div> <!--end of battery-->
+    </div>
+</div>
+
+<section class="container" data-aos="fade-up">
+    <div>
+        <h2 class="hp2 mcell" style="width:fit-content;margin:0px auto">Prediction of the solar system's 14-day productivity</h2>
+      
+    </div>
+
+
+    <div class="tback  ">
+    <div class="tcontent  ">
+        <div class="month ">
+            <table class="table table12">
+                <thead>
+                    <tr>
+
+                        <th scope="col">day</th>
+                        <th scope="col">date</th>
+                        <th scope="col">output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < 14; i++)
+                    {
+                        <tr>
+
+                            <td class="">@days[i]</td>
+                            <td>@date[i]</td>
+                                <td>@rnd.Next(300,700) Kw/h</td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div><!--and first table-->
+
+     
+
+        </div>
+    </div>
+
+
+</section>
+@code {
+        double elecrtic_bill { get; set; }
+        string your_location { get; set; }
+        double roof_space { get; set; }
+        string cell_type { get; set; }
+        string install_type { get; set; }
+        double space_required { get; set; }
+        double panels_count { get; set; }
+        string system_page { get; set; }
+        List<string> days { get; set; }
+        List<string> date { get; set; }
+    Random rnd = new Random();
+
+    protected override async Task OnInitializedAsync()
+    {
+        elecrtic_bill = 123;
+        your_location = "mans";
+        roof_space = 22;
+        days = new List<string>();
+        date = new List<string>();
+
+        for (int i = 0; i < 14; i++)
+        {
+            //days.Add(DateTime.Now.DayOfWeek.ToString());
+            DateTime dt = DateTime.Today.AddDays(i);
+            days.Add(dt.DayOfWeek.ToString());
+            date.Add(dt.Date.ToShortDateString());
+        }
+
+    }
+}
+

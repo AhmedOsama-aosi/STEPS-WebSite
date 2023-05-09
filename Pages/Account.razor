@@ -1,0 +1,231 @@
+﻿@inject IJSRuntime jsRuntime
+@page "/Account"
+@*<img src="images/Account.png" width="80%" height="2000" style="margin:100px auto 30px auto; display:block;" />
+*@
+
+
+    <h2 class="hprofile" >Get more information about your system<br>
+      and predict the productivity</h2>
+      <section class="container sectionprofile1" data-aos="fade-down">
+          <div style="display:flex;margin:0 auto;width:75%;justify-content:space-between;">
+              <div >  <h2>Your info</h2></div>
+               <div > <button type="button" class=" text-warning updatebtn" >update</button>
+                
+              </div>
+              </div>
+              <div class="dprofile1 ">
+                  <div class="row ">
+                      <div class="col-10">
+                <div class=""><h5 class=" dname">Name</h5> <p class="">@Models.User.theUser.Name</p></div>
+
+                <div class=""><h5 class="dname">Phone</h5> <p class="">@Models.User.theUser.Phone</p></div>
+
+                <div class=""><h5 class="dname">address</h5> <p class="">@Models.User.theUser.Address</p></div>
+                      </div>
+                       <div class="col-1"> 
+                          <i class="fa-solid fa-user"></i>
+                      </div>
+                      </div>
+                    </div>
+      </section>
+  
+  
+                  <section class="container">
+              
+                 <div class="dprofile2 " data-aos="fade-down">
+        <div style="display:flex;margin:0 auto;width:75%;justify-content:space-between;">
+                      <div >  <h2>Your info</h2></div>
+                       <div class=" d-flex dselect"> 
+                        <span>station:</span>
+                        <select class="form-select form-select-sm select1" aria-label=".form-select-sm example">
+                         
+                          <option value="1">company 1</option>
+                          <option value="2">company 2</option>
+                          <option value="3">company 3</option>
+                        </select>
+                      </div>
+                      </div>
+  
+                 </div>
+                 <div class="">
+                  <div class="dsystem2 mcel">
+            <div class="dcell5 marg" data-aos="fade-down">Roof space: <spam>1200 m<sup>2</sup> </spam> </div>
+                      <div class="dcell5" data-aos="fade-down">Your location: <spam>12</spam> </div>
+                  </div>
+                  <div class="dsystem2 mcel">
+                    <div class="dcell5" data-aos="fade-down">electric bill: <spam>2000 L.E</spam> </div>
+                    
+                </div>
+                </div> <!--end of yuor info-->
+            
+                <h1 class="hprof">Your system</h1>
+  <div class=" float-sm-none">
+  <div class="dsystem2 mcel ">
+      <div class="dcell5 marg" data-aos="fade-down">cell type: <span>@station.SolarPanelType</span> </div>
+            <div class="dcell5" data-aos="fade-down">install type: @station.InstallationType </div>
+  </div>
+  
+  <div class="dsystem2 mcel">
+            <div class="dcell5 marg" data-aos="fade-down">space required: @station.Space m<sup>2</sup>  </div>
+      <div class="dcell5" data-aos="fade-down">Panels count: @station.SolarPanelCount panel</div>
+  </div>
+  
+  <div class="dsystem2 mcel">
+            <div class="dcell5 " data-aos="fade-down">system age: @station.InstallationDate</div>
+      
+  </div>
+  </div> <!--end of system-->
+      
+  </section>
+  <section class="container">
+  <h1 class="hprof">Battery</h1>
+  
+  <div class=" ">
+        <div class="dcell4 " data-aos="fade-down">Total Ampere: @station.TotalAmpereNeed Amp</div>
+    
+  </div>
+  <div class=" ">
+        <div class="dcell4" data-aos="fade-down">battery capacity:@station.BatteryCapacty Amp</div>
+  </div>
+  
+  <div class=" ">
+        <div class="dcell4" data-aos="fade-down">total numbwr of batteries:@station.BattteryCount battery</div>
+  </div>
+  
+  <div class=" ">
+    <div class="dcell4" data-aos="fade-down">battery age:@station.BatteryDate </div>
+  </div> <!--end of battery-->
+  
+  
+  
+  <div class="dprofile3 text-center">
+        <div style="display:flex;margin:0 auto;width:75%;justify-content:space-between;">
+        <div >  <h2>consumption history </h2></div>
+         <div class=" d-flex dselect2"> 
+          <span>station:</span>
+          <select class="form-select form-select-sm select2" aria-label=".form-select-sm example">
+           
+            <option value="1">company 1</option>
+            <option value="2">company 2</option>
+            <option value="3">company 3</option>
+          </select>
+        </div>
+        </div>
+  
+   </div>
+  </section>
+  <style>
+      .chart-colms{
+        
+        width: 45px;
+        background-color: #ffc107;
+        border-radius: 10px 10px 0px 0px;
+      }
+  </style>
+<div data-aos="fade-down">
+   
+    <div style="width:50%;margin:0 auto; display:flex;justify-content:space-between;border-bottom:2px solid black ;padding:15px;">
+        @for (int i = 0; i < values.Count; i++)
+        {
+            <div style="display: flex;flex-direction: column-reverse;">
+
+
+                <div class="chart-colms" style="height:@(values[i]/1.5)px" ></div>
+                <div style="">@values[i]kwh</div>
+            </div>
+        }
+
+    </div>
+    <div style="width:48.5%;margin:0 auto; display:flex;justify-content:space-between;padding:15px;">
+        @for (int i = 0; i < currnt_month.Count; i++)
+        {
+            <div style="">@currnt_month[i]</div>
+        }
+    </div>
+
+</div>
+
+  
+
+
+
+
+
+<a href="Predection" style="display:block; margin:50px auto;width:fit-content">
+	<button style="background:#FFCC00;color:#000; border-radius:10px; border:none; height:45px;width:250px;  ">
+		Predict system production</button>
+</a>
+@code {
+    List<int> values = new List<int> { 400, 500, 600,700,600,590,400,650,700,720,640,500 } ;
+    List<string> month = new List<string> { "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" };
+    List<string> currnt_month =new List<string>();
+    List<Month_Output> monthes = new List<Month_Output>();
+    Models.StationInfo station;
+    private IJSObjectReference? chart;
+    void usage()
+    {
+        currnt_month.Clear();
+        int dt = DateTime.Now.Month;
+        dt = dt - 1;
+        for (int i = 0; i < month.Count; i++)
+        {
+            if (i == dt)
+            {
+                currnt_month.AddRange(month.GetRange(i+1, 11 - i));
+                currnt_month.AddRange(month.GetRange(0,i+1));
+                
+            }   
+        }
+
+    }
+    class Month_Output
+    {
+        public int output { get; set; }
+        public int index { get; set; }
+        public int text { get; set; }
+        public int year { get; set; }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+
+        ////mapinit = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./Scripts/map.js");
+        //chart = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./Scripts/chart.js");
+        //if (chart != null)
+        //{
+        //    await chart.InvokeVoidAsync("getchart");
+
+        //    //StateHasChanged();
+        //}
+        try
+        {
+            station = new Models.StationInfo();
+            // Models.StepsContext db = new Models.StepsContext();
+
+            //u1.Email = username;
+            //u1.Password = password;
+            //db.Users.Add(u1);
+            //db.SaveChanges();
+            ///
+            // station = db.StationInfos.First(x => x.UserId == Models.User.theUser.Id);
+            ///
+
+            station.SolarPanelType = "jenco ";
+            station.InstallationType = "Tracking";
+            station.Space = 18;
+            station.SolarPanelCount = 11;
+            station.InstallationDate = DateTime.Parse("3/01/2023");
+            station.TotalAmpereNeed = 1000;
+            station.BatteryCapacty = 200;
+            station.BattteryCount = 5;
+            station.BatteryDate = DateTime.Parse("3/01/2023");
+            usage();
+
+            }
+            catch (Exception)
+            {
+                
+            }
+
+        
+    }
+}

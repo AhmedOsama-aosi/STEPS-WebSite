@@ -1,0 +1,574 @@
+﻿@inject NavigationManager NavManager
+@inject IJSRuntime jsRuntime
+
+@page "/Claculating"
+
+<style>
+	mapnote {
+		font-size: 16px;
+		color: black;
+		border-radius: 10px;
+		padding: 5px;
+		margin: 10px 0px;
+	}
+
+	.mapnote span {
+		font-size: 22px;
+		font-weight: 500;
+		color:   #0a0a0a;
+
+	}
+</style>
+
+<br />
+<br />
+<div class="container">
+	<h1 style="margin:20px auto; width:fit-content">Calculate your Need</h1>
+
+	<input id="pac-input"
+		   class="controls"
+		   type="text"
+		   placeholder="Search Box" />
+
+	<section class="container">
+		<div id="map" class="map2"></div>
+	</section>
+	<div id="panel">
+		<div id="color-palette" style="width:0"></div>
+		<div>
+			<button id="delete-button" style="background-color:white; box-shadow: 1px 4px 8px rgb(160, 160, 158);height:30px">Delete Selected Shape</button>
+			@*<button id="calculate" onClick="calcar()">calculate area</button>*@
+
+		</div>
+	</div>
+	<br />
+
+	<div style="width:80%;margin:0 auto">
+		<section class="container ">
+			<div class="mapnote alert alert-warning">
+    <!-- <h3>note</h3> -->
+    <p><span>note: </span>
+					Determine your location by click on <strong>current location button</strong>   or write your location in
+					<strong>map search box</strong>  to get the current location and to determine the <strong>
+						surface area
+					</strong> select your roof on map or write your roof area direct in <strong> roof space textbox below</strong> 
+    </p>
+			
+  </div>
+</section>
+
+<h2>Enter :</h2>
+	<div class=" divimp">
+			<label class="lbl">
+				<input type="text" class="inp1 inpt" id="area" placeholder="Roof space">
+				<span class="lbl_spn">Roof space (m<sup>2</sup>)</span>
+			</label>
+			<label class="lbl">
+				<input type="text" class="inp1 inpt" id="space"  placeholder="your location" @bind-value=@location>
+
+				<span class="lbl_spn">Your location</span>
+			</label>
+</div>
+	<div class=" divimp">
+			<label class="lbl">
+				<input @bind-value=@electricCost @onchange='(x)=>On_Change_ElecCost(x)' @bind-value:event="oninput" type="text" class="inp1 inpt" placeholder="Elactricity Cost">
+				<span class="lbl_spn">Elactricity Cost (LE)</span>
+			</label>
+			<label class="lbl">
+				<input @bind-value="@homeNeed" @onchange="(x)=>watt_to_price(x)" @bind-value:event="oninput" type="text" class="inp1 inpt" placeholder="Elactricity consumption (W)">
+				<span class="lbl_spn">Elactricity consumption (W)</span>
+			</label>
+
+
+</div>
+
+
+	<h2 style="font-size:20px">I use Electricity :</h2>
+
+
+	<div class=" section2 " style="margin:0 auto;width:850px">
+		<ul class="radio row" style="padding:0">
+			<li class='@(currentUseTab==1?"btnactive":"") col-1' data-cont1=".one" @onclick='()=>changeTab("use",1)'>
+				equally throughout the day
+			</li>
+			<li class='@(currentUseTab==2?"btnactive":"") col-1' data-cont1=".two" @onclick='()=>changeTab("use",2)'>
+				mostly during the morning
+			</li>
+			<li class='@(currentUseTab==3?"btnactive":"") col-1' data-cont1=".three" @onclick='()=>changeTab("use",3)'>
+				mostly during the evening
+			</li>
+		</ul>
+	</div><!--end radio bottons-->
+	<div class="row">
+
+			<h3 class="col-2" style="margin:10px 0;font-size:25px;display: grid; align-content: center;">
+				for :
+			</h3>
+			<div class="section2 col-8">
+			<ul class="radio" style="padding:0; width: fit-content; margin: 0 auto;">
+
+				<li class='@(currentForTab==1?"btnactive":"") col-1' data-cont1=".one" @onclick='()=>changeTab("for",1)'>
+					home
+				</li>
+				<li class='@(currentForTab==2?"btnactive":"") col-1' data-cont1=".two" @onclick='()=>changeTab("for",2)'>
+					business
+				</li>
+
+			</ul>
+		</div><!--end radio bottons-->
+	</div>
+	<div class="row">
+			<h3 class="col-2" style="margin:10px 0;font-size:25px;display: grid; align-content: center;">my case :</h3>
+		<div class=" section2 col-8">
+			<ul class="radio" style="padding:0; width: fit-content; margin: 0 auto;">
+				<li class='@(currentMyCaseTab==1?"btnactive":"") col-1' data-cont1=".one" @onclick='()=>changeTab("case",1)'>
+					on-grid
+				</li>
+				<li class='@(currentMyCaseTab==2?"btnactive":"") col-1' data-cont1=".two" @onclick='()=>changeTab("case",2)'>
+					off-grid
+				</li>
+
+			</ul>
+		</div><!--end radio bottons-->
+	</div>
+	
+	<br />
+
+	<br />
+	<button class="defalutButton" style="font-weight:700 " @onclick=@claculate>calculate</button>
+<br />
+<h2>Results :</h2>
+	<div class=" section2 ">
+		<ul class="resultTabs" style="padding:0; width: fit-content; margin: 0 auto;">
+			<li class='@(currentResultTab==1?"btnactive":"")' @onclick='()=>changeTab("result",1)'>
+				suitable for you
+			</li>
+			<li class='@(currentResultTab==2?"btnactive":"")' @onclick='()=>changeTab("result",2)'>
+				best you can get from your space
+			</li>
+			
+		</ul>
+	</div>
+	<div class="dcontent" style="margin:0px 0px 0px 40px">
+		<div class="suitable" style="margin:0px 0px 0px -20px">
+			
+		
+			<div class="dcell3">Total power Need: @totalNeed W per day</div>
+			<div class="dcell3">Power needed from panels: @PowerNeededFromPanels W per hour</div>
+
+	
+			<div class="divimp" style="width: 70%;margin:20px auto;">
+					<div class="dcell3" style="height:330px ;width:300px ;border-radius:20px; padding: 0;">
+						<div style="background-color: #f1f1f1; width: 100%; height: 70px;border-radius: 15px 15px 0 0;padding: 10px;">
+							<h2 style="width:fit-content;margin:0 auto"> fixed system</h2>
+						</div>
+
+						<div style="width:fit-content;height:65%; margin:20px auto;display: grid;justify-items: center; align-content: space-between;">
+						
+							<div><span style="font-weight:700;font-size:larger">@Cost</span>L.E cost</div>
+							<div> <span style="font-weight:700;font-size:larger">@SizeNeeded</span>m<sup>2</sup> space required </div>
+							<div> <span style="font-weight:700;font-size:larger">@NumberOfPanelsNeeded</span> Panels</div>
+							<div class="btn btn-warning fs-5 element3" style="margin-top:20px; border-radius: 15px;font-size: 16px!important;">
+								Know more
+							</div>
+					</div>
+					
+				</div>
+					<div class="dcell3" style="height:330px ;width:300px;border-radius:20px; padding: 0;">
+						<div style="background-color: #f1f1f1; width: 100%; height: 70px;border-radius: 15px 15px 0 0;padding: 10px;">
+							<h2 style="width:fit-content;margin:0 auto"> Tracking system</h2>
+						</div>
+					
+					<div style="width:fit-content;height:65%; margin:20px auto;display: grid;justify-items: center; align-content: space-between;">
+
+							<div><span style="font-weight:700;font-size:larger">@CostT</span>L.E cost</div>
+							<div> <span style="font-weight:700;font-size:larger">@SizeNeeded2</span>m<sup>2</sup> space required </div>
+						<div> <span style="font-weight:700;font-size:larger">@NumOfPanelsT</span> Panels</div>
+							<div class="btn btn-warning fs-5 element3" style="margin-top:20px; border-radius: 15px; font-size: 16px!important; ">
+								Know more
+							</div>
+					</div>
+					
+
+				</div>
+			</div>
+
+		
+	
+			
+				<h2 style="margin:10px 0px">Battery Needed :</h2>
+
+				<div class=" divimp" style="width:90%; margin: 20px auto;">
+
+					<div class="dcell3" style="width: 400px; margin:0 auto">Total apmere:  @TotalAmpereNeed Amp </div>
+					<div class="dcell3" style="width: 400px; margin:0 auto">Battery capacity:  @BatteryCapacity Amp</div>
+				</div>
+				<div class=" divimp" style="width:90%;">
+					<div class="dcell3" style="width: 400px; margin:0 auto">total Number Of Batteries:  @NumBattery battery </div>
+					<div class="dcell3" style="width: 400px; margin:0 auto">Battery cost:  @BatteryCost L.E </div>
+				</div>
+
+		
+
+			
+
+				<h2 style="margin:10px 0px">Estimate saving : </h2>
+
+				<div class="dresult ">
+					<div class="dcell3">You will save :  @youWillSave % on 25 years = @(Math.Ceiling((youWillSave / 100) * totalElectricCost)) L.E </div>
+				</div>
+
+			</div>
+		</div> <!--end suitable-->
+		
+
+
+	
+</div>
+</div>
+
+
+@code {
+	double? homeNeed { get; set; }
+	double availableSpace { get; set; }
+	double? electricCost { get; set; }
+	double totalElectricCost { get; set; }
+	double totalNeed { get; set; }
+	double Radiation { get; set; }
+	double PowerNeededFromPanels { get; set; }
+	double PowerFromSinglePanel { get; set; }
+	double NumberOfPanelsNeeded { get; set; }
+	double SizeOfPanel { get; set; }
+	double SizeNeeded { get; set; }
+	double NumOfPanelsT { get; set; }
+	double SizeNeeded2 { get; set; }
+	double Cost { get; set; }
+	double CostT { get; set; }
+	//batteries
+	double TotalAmpereNeed { get; set; }
+	double NumCloudDays { get; set; }
+	double Volt { get; set; }
+	double NumBattery { get; set; }
+	double BatteryCapacity { get; set; }
+	double BatteryCost { get; set; }
+	double TrackingsystemCost { get; set; }
+	double chassisCost { get; set; }
+	int currentUseTab { get; set; }
+	int currentResultTab { get; set; }
+	int currentForTab { get; set; }
+	int currentMyCaseTab { get; set; }
+	string location { get; set; }
+	double youWillSave { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		Radiation = 6;
+		SizeOfPanel = 1.6;
+		PowerFromSinglePanel =590;
+		NumCloudDays=4;
+		Volt = 24;
+		BatteryCapacity = 200;
+		currentResultTab = 1;
+		currentForTab = 1;
+		//location = "31°02'32.0 N 31°21'07.7 E";
+		electricCost = null;
+		homeNeed = null;
+		TrackingsystemCost = 5000;
+		chassisCost = 4000;
+		//NavManager.NavigateTo("page2");
+	}
+
+
+	public void claculate(){
+		if(homeNeed!=0 && homeNeed!=null)
+		{
+			totalNeed = ((double)homeNeed) * 1.25;
+			PowerNeededFromPanels = Math.Ceiling(totalNeed / Radiation);
+			NumberOfPanelsNeeded = Math.Ceiling(PowerNeededFromPanels / PowerFromSinglePanel);
+			SizeNeeded = Math.Ceiling(NumberOfPanelsNeeded * SizeOfPanel);
+			NumOfPanelsT = Math.Ceiling((totalNeed / (Radiation + 3)) / PowerFromSinglePanel);
+			SizeNeeded2 = Math.Ceiling(NumOfPanelsT * SizeOfPanel);
+			Cost = 15000 * NumberOfPanelsNeeded;
+			CostT = 15000 * NumOfPanelsT + TrackingsystemCost + ((NumOfPanelsT/5)*chassisCost);
+			if (currentMyCaseTab == 2)
+			{
+				TotalAmpereNeed = Math.Ceiling(totalNeed * NumCloudDays * 0.7 / Volt);
+				NumBattery = Math.Ceiling(TotalAmpereNeed / BatteryCapacity);
+				BatteryCost = NumBattery * 5000;
+			}
+			else
+			{
+				BatteryCost = 0;
+			}
+			totalElectricCost = (double)electricCost * 12 * 25;
+			youWillSave = 100 - Math.Ceiling((double)((Cost + BatteryCost) / totalElectricCost) * 100);
+		}
+
+	}
+	void sutibleforyou()
+	{
+		getthearea();
+
+		int area = 1000;
+		NumOfPanelsT = Math.Ceiling(availableSpace / SizeOfPanel);
+		PowerFromSinglePanel = 650;
+		PowerNeededFromPanels = NumOfPanelsT * PowerFromSinglePanel;
+		totalNeed = PowerNeededFromPanels * (Radiation + 3);
+		CostT = 25000 * NumOfPanelsT + TrackingsystemCost + ((NumOfPanelsT / 5) * chassisCost);
+		SizeNeeded2 = Math.Ceiling(NumOfPanelsT * SizeOfPanel);
+		Cost = 0;
+		SizeNeeded = 0;
+		NumberOfPanelsNeeded = 0;
+		if (currentMyCaseTab == 2)
+		{
+			TotalAmpereNeed = Math.Ceiling(totalNeed * NumCloudDays * 0.7 / Volt);
+			NumBattery = Math.Ceiling(TotalAmpereNeed / BatteryCapacity);
+			BatteryCost = NumBattery * 5000;
+		}
+		else
+		{
+			BatteryCost = 0;
+		}
+		totalElectricCost = totalNeed * 12 * 25 * 0.148 ;
+		youWillSave = 100 - Math.Ceiling((double)((CostT + BatteryCost) / totalElectricCost) * 100); ;
+	}
+	private void changeTab(string tab, int i)
+	{
+		switch (tab)
+		{
+			case "use":
+				currentUseTab = i;
+				break;
+			case "for":
+				currentForTab = i;
+				price_to_watt(electricCost);
+				break;
+			case"case":
+				currentMyCaseTab = i;
+				break;
+			case "result":
+				currentResultTab = i;
+				if(i == 2)
+				{
+					getthearea();
+				}
+				else
+				{
+					claculate();
+				}
+
+				break;
+		}
+
+
+	}
+
+
+	void watt_to_price(ChangeEventArgs value)
+	{
+		try
+		{
+			double x = (Convert.ToDouble(value.Value) / 1000) * 30;
+			double price = 0;
+			if (x > 50)
+			{
+				if (x > 100)
+				{
+					if (x > 200)
+					{
+						if (x > 350)
+						{
+							if (x > 650)
+							{
+								if (x > 1000)
+								{
+									price = x * 1.45;
+								}
+								else
+								{
+									price = x * 1.28;
+								}
+							}
+							else
+							{
+								price = 200 * 0.77 + 150 * 1.06 + (x - 350) * 1.28;
+							}
+						}
+						else
+						{
+							price = 200 * 0.77 + (x - 200) * 1.06;
+
+						}
+					}
+					else
+					{
+						price = x * 0.77;
+
+					}
+				}
+				else
+				{
+					price = 50 * 0.48 + (x - 50) * 0.58;
+
+				}
+			}
+			else
+			{
+				price = x * 0.48;
+
+			}
+			electricCost = price;
+		}
+		catch (Exception)
+		{
+
+		}
+
+	}
+
+	void On_Change_ElecCost(ChangeEventArgs value)
+	{
+		try
+		{
+			electricCost = Convert.ToDouble(value.Value);
+			price_to_watt(electricCost);
+		}
+		catch (Exception)
+		{
+
+		}
+
+	}
+	void price_to_watt(double? electricCost)
+	{
+		try
+		{
+			double x = (double)electricCost;
+			double watt = 0;
+			if (currentForTab == 2)
+			{
+				for_business(x, ref watt);
+			}
+			else
+			{
+				for_home(x, ref watt);
+			}
+
+			//---
+
+			homeNeed = Math.Ceiling(watt * 1000 / 30);
+		}
+		catch (Exception)
+		{
+
+		}
+	}
+
+	void for_business(double x,ref double watt)
+	{
+		if (x > 0 && x < 65)
+		{
+			watt = x / 0.65;
+		}
+		if (x > 65 && x < 300)
+		{
+			watt = x / 1.2;
+		}
+		if (x > 300 && x < 840)
+		{
+			watt = x / 1.4;
+		}
+		if (x > 840 && x < 1460)
+		{
+			watt = (600 / 1.4) +((x-600)/1.55);
+		}
+		if (x > 1460)
+		{
+			watt = x / 1.60;
+		}
+	}
+	void for_home(double x ,ref double watt)
+	{
+		if (x <= 24 && x > 0)
+		{
+			watt = x / 0.48;
+		}
+		if (x <= 53 && x > 24)
+		{
+			watt = 50 + ((x - 24) / 0.58);
+		}
+		if (x <= 154 && x > 53)
+		{
+			watt = 100 + ((x - 53) / 0.77);
+		}
+		if (x <= 313 && x > 154)
+		{
+			watt = 200 + ((x - 154) / 1.06);
+		}
+		if (x <= 697 && x > 313)
+		{
+			watt = 350 + ((x - 313) / 1.28);
+		}
+		if (x <= 1280 && x > 697)
+		{
+			if (x < 833.25)
+			{
+				watt = 651;
+			}
+			else
+			{
+				watt = x / 1.28;
+			}
+
+		}
+		if (x > 1280)
+		{
+			watt = x / 1.45;
+		}
+	}
+	private IJSObjectReference? mapinit;
+	private IJSObjectReference? main;
+
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			//mapinit = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./Scripts/map.js");
+			main = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./Scripts/map_script.js");
+			if (main != null)
+			{
+				await main.InvokeVoidAsync("initialize");
+
+				//StateHasChanged();
+			}
+
+
+		}
+	}
+
+	async void getthearea()
+	{
+
+		try
+		{
+			string? areavalue = await main.InvokeAsync<String>("getareavalue");
+			if (areavalue != null)
+			{
+
+				availableSpace = double.Parse(areavalue);
+				sutibleforyou();
+				StateHasChanged();
+			}
+		}
+		catch (Exception)
+			{
+				
+			}
+			
+		
+		
+
+	}
+}
+}

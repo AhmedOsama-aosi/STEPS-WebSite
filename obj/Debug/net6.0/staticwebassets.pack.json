@@ -1,0 +1,393 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\StepsWebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\StepsWebApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\.env",
+      "PackagePath": "staticwebassets\\.env"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\aos.js",
+      "PackagePath": "staticwebassets\\Scripts\\aos.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\chart.js",
+      "PackagePath": "staticwebassets\\Scripts\\chart.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\jquery-3.6.3.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.6.3.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\main.js",
+      "PackagePath": "staticwebassets\\Scripts\\main.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\map_script.js",
+      "PackagePath": "staticwebassets\\Scripts\\map_script.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\Scripts\\script.js",
+      "PackagePath": "staticwebassets\\Scripts\\script.js"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\Estyle.css",
+      "PackagePath": "staticwebassets\\css\\Estyle.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\article.css",
+      "PackagePath": "staticwebassets\\css\\article.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\articls.css",
+      "PackagePath": "staticwebassets\\css\\articls.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\footer.css",
+      "PackagePath": "staticwebassets\\css\\footer.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\navbar.css",
+      "PackagePath": "staticwebassets\\css\\navbar.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\predict.css",
+      "PackagePath": "staticwebassets\\css\\predict.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\product.css",
+      "PackagePath": "staticwebassets\\css\\product.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\products.css",
+      "PackagePath": "staticwebassets\\css\\products.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Artboard – 1.png",
+      "PackagePath": "staticwebassets\\images\\Artboard – 1.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Auto cleaning.png",
+      "PackagePath": "staticwebassets\\images\\Auto cleaning.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Commerial.png",
+      "PackagePath": "staticwebassets\\images\\Commerial.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Component 1 – 1.png",
+      "PackagePath": "staticwebassets\\images\\Component 1 – 1.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Footer background.png",
+      "PackagePath": "staticwebassets\\images\\Footer background.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Footer.png",
+      "PackagePath": "staticwebassets\\images\\Footer.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Group 4.jpg",
+      "PackagePath": "staticwebassets\\images\\Group 4.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Group.jpg",
+      "PackagePath": "staticwebassets\\images\\Group.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 1.jpg",
+      "PackagePath": "staticwebassets\\images\\Image 1.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 10.png",
+      "PackagePath": "staticwebassets\\images\\Image 10.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 15.png",
+      "PackagePath": "staticwebassets\\images\\Image 15.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 16.png",
+      "PackagePath": "staticwebassets\\images\\Image 16.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 17.png",
+      "PackagePath": "staticwebassets\\images\\Image 17.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 18.png",
+      "PackagePath": "staticwebassets\\images\\Image 18.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 19.png",
+      "PackagePath": "staticwebassets\\images\\Image 19.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 20.png",
+      "PackagePath": "staticwebassets\\images\\Image 20.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 21.png",
+      "PackagePath": "staticwebassets\\images\\Image 21.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 23.png",
+      "PackagePath": "staticwebassets\\images\\Image 23.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 25.png",
+      "PackagePath": "staticwebassets\\images\\Image 25.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 26.png",
+      "PackagePath": "staticwebassets\\images\\Image 26.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 27.png",
+      "PackagePath": "staticwebassets\\images\\Image 27.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 28.png",
+      "PackagePath": "staticwebassets\\images\\Image 28.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 29.png",
+      "PackagePath": "staticwebassets\\images\\Image 29.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 30.png",
+      "PackagePath": "staticwebassets\\images\\Image 30.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 5.jpg",
+      "PackagePath": "staticwebassets\\images\\Image 5.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 7.jpg",
+      "PackagePath": "staticwebassets\\images\\Image 7.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 8.png",
+      "PackagePath": "staticwebassets\\images\\Image 8.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image 9.png",
+      "PackagePath": "staticwebassets\\images\\Image 9.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Image5.png",
+      "PackagePath": "staticwebassets\\images\\Image5.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Recharge Station.png",
+      "PackagePath": "staticwebassets\\images\\Recharge Station.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\Residental.png",
+      "PackagePath": "staticwebassets\\images\\Residental.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\building1-01-small.jpg",
+      "PackagePath": "staticwebassets\\images\\building1-01-small.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\building1-01-small.png",
+      "PackagePath": "staticwebassets\\images\\building1-01-small.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\carsole.jpg",
+      "PackagePath": "staticwebassets\\images\\carsole.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\map.jpg",
+      "PackagePath": "staticwebassets\\images\\map.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\off grid.png",
+      "PackagePath": "staticwebassets\\images\\off grid.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\off-grid-1.png",
+      "PackagePath": "staticwebassets\\images\\off-grid-1.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\off-grid-2.png",
+      "PackagePath": "staticwebassets\\images\\off-grid-2.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\off-grid-3.png",
+      "PackagePath": "staticwebassets\\images\\off-grid-3.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\on grid.png",
+      "PackagePath": "staticwebassets\\images\\on grid.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\on-grid-1.png",
+      "PackagePath": "staticwebassets\\images\\on-grid-1.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\on-grid-2.png",
+      "PackagePath": "staticwebassets\\images\\on-grid-2.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\on-grid-3.png",
+      "PackagePath": "staticwebassets\\images\\on-grid-3.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\partners.png",
+      "PackagePath": "staticwebassets\\images\\partners.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\services.png",
+      "PackagePath": "staticwebassets\\images\\services.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\slider background.png",
+      "PackagePath": "staticwebassets\\images\\slider background.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\solar1-04-small.jpg",
+      "PackagePath": "staticwebassets\\images\\solar1-04-small.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\images\\title.png",
+      "PackagePath": "staticwebassets\\images\\title.png"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\BlazorApp1\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.StepsWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.StepsWebApp.props",
+      "PackagePath": "build\\StepsWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.StepsWebApp.props",
+      "PackagePath": "buildMultiTargeting\\StepsWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.StepsWebApp.props",
+      "PackagePath": "buildTransitive\\StepsWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

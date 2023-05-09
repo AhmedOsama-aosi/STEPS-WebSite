@@ -1,0 +1,136 @@
+.artsection1 img{
+    width: 70%;
+    height: 370px;
+  margin-top: 50px;
+  transition: .4s;
+ }
+ .artsection1 img:hover{
+    transform: scale(1.2);
+    
+}
+ .artsection2{
+    margin-top: 40px;
+
+ }
+ .artsection2 h2{
+   /* margin-left: 260px;  */
+   margin-left: 17%;
+    margin-bottom: 20px;
+ }
+ .artsection2 span,a{
+    padding: 8px;
+    color: #000;
+ }
+.artsection3 {
+    margin: auto;
+    width: 67%;
+    padding: 40px;
+    margin-top: 30px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+    border-radius: 15px;
+}
+ .artsection3 .aimg2 {
+  width: 83%;
+  height: 300px;
+ }
+ .artsection3 h3{
+    margin-top: 20px;
+    width: 78%;
+ }
+ .artsection3 p{
+    font-size: 18px;
+ }
+.articlep1{
+    width: 85%;
+    font-size: 18px;
+    white-space: pre-line;
+}
+.articlep4 p{
+    margin-top: 10px;
+    font-size: 18px;
+    width: 70%;
+    white-space: pre-line;
+}
+.articlep4 img{
+ width: 250px;
+ height: 300px;
+ margin-top: 10px;
+
+}
+.articlep5 img{
+    width:100% ;
+    height: 300px;
+    margin-bottom: 10px;
+}
+.hh5{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.articlep7{
+    margin: auto;
+    width: 95%;
+    margin-bottom: 100px;
+}
+.articlep6 {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+    border-radius: 15px;
+    margin: 5px;
+    overflow: hidden;
+}
+.articlep6 img{
+   margin:10px 0px ;
+    width: 100%;
+    height: 200px;
+    transition: .5s;
+}
+.articlep6 img:hover{
+    transform: scale(1.1);
+    
+}
+.articlep7 p{
+  font-size: 18px;
+  width: 190px;
+  color: #000;
+}
+.articlep7 a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+   
+   position: relative ;
+    left: 70px;
+   bottom: 20px;
+   
+}
+@media(max-width: 768px){ 
+    .artsection1 img{
+
+        width: 80%;
+        height: 350px;
+     
+      
+     }
+    .artsection3{
+        margin: auto;
+        width: 80%;}
+        .artsection2 h2{
+            font-size: 18px;
+            margin-left: 6%;}
+            .articlep4 img{
+                width: 80%;}
+                .artsection2 span,a{
+                    padding: 4px;
+                    color: #000;
+                 }
+        .articlep7 a{
+                    font-size: 16px;
+                    margin: auto;
+                   /* margin-left: 50px; */
+                    margin-bottom: 10px;
+                }
+
+}

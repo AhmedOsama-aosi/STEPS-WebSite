@@ -1,0 +1,346 @@
+.lbl {
+    position: relative;
+    margin:0px auto;
+}
+
+.inpt {
+   
+    border: none;
+    outline: none;
+}
+
+    .inpt::placeholder {
+        opacity: 0;
+    }
+
+.lbl_spn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.65;
+    transform: translate(10px,10px);
+    font-size: 0.825em;
+    transition-duration: 300ms;
+}
+
+
+
+.lbl:focus-within > .lbl_spn,
+.inpt:not(:placeholder-shown) + .lbl_spn {
+    color: black;
+    transform: translate(10px,-10px);
+    opacity: 1;
+}
+
+.element1{
+    margin-left: 200px;
+}
+.element2{
+    margin: 10px;
+    height: 35px;
+    align-content: center;
+}
+.h1{
+  color:#000;
+  
+}
+.h3{
+    padding-top: 10px;
+   margin-left: 100px;
+}
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-right: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+    height: 30px;
+    border-radius: 7px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 3px 8px 0px #0000006e;
+}
+.custom-map-control-button {
+    background-color: #fff;
+    border-radius: 7px;
+    margin:10px;
+    font-size:15px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 3px 8px 0px #0000006e;
+}
+.map-container {
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+    .map-container iframe{
+   
+    top:0;
+    height:500px;
+    width:100%;
+    position:absolute;
+    }
+    .section1{
+        margin:auto;
+    }
+   /* .section2{
+        margin: auto;
+    }*/
+
+.inp1 {
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 5px;
+    margin: 0 auto;
+    // margin-left: 60px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+    margin-bottom: 30px;
+}
+.divimp {
+    width: 700px;
+    display: flex;
+    list-style: none;
+    margin:auto;
+}
+.elec{
+    margin-left: 80px;
+    margin-top: 40px;
+}
+/*.btn2{
+    font-size: 20px;
+    color: black;
+    background-color: rgb(250, 250, 248);
+    border: 1px solid rgb(194, 194, 194);
+    box-shadow:1px 1px 1px rgb(170, 170, 169);
+    border-radius: 15px;
+    width: 280px;
+    padding: 3px;
+    margin : 10px;
+}*/
+.btnactive,.radio li:hover {
+    background-color: rgb(240, 188, 17);
+}
+.radio{
+    display: flex;
+    list-style: none;
+    
+}
+    .radio li {
+        font-size: 20px;
+        color: black;
+        /* border: 1px solid grey; */
+        box-shadow: 1px 3px 8px 0px #bdbdbd;
+        border-radius: 15px;
+        width: 260px;
+        padding: 3px;
+        margin: 15px;
+        text-align: center;
+        cursor: pointer;
+    }
+ .results{
+   display: flex;
+    list-style: none;
+    margin: 0 0 0 20%;
+
+}
+    .results li {
+        font-size: 20px;
+        color: black;
+        /* border: 1px solid rgb(179, 177, 177); */
+        box-shadow: 1px 3px 8px 0px #bdbdbd;
+        border-radius: 15px;
+        width: 330px;
+        padding: 5px;
+        margin: 15px;
+        text-align: center;
+        cursor: pointer;
+    }
+ .active3,.tabs2 li:hover{
+    background-color: rgb(241, 177, 14);
+    
+}
+.dcontent >div:not(:first-child){
+    display: block;
+}
+.resultTabs {
+    display: flex;
+    list-style: none;
+    margin: 0px 0px 10px 0px;
+}
+.resultTabs li {
+    font-size: 20px;
+    color: black;
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+    border-radius: 15px;
+    width: 500px;
+    padding: 3px;
+    margin: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+ .dresult{
+    /*margin-left: 160px;*/
+     display: inline-block;
+     display: flex;
+ 
+ }
+.dcell3 {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 40px;
+    padding: 5px;
+    margin: 20px auto;
+    font-size: 18px;
+    /* border:2px solid rgb(161, 160, 158); */
+    border-radius: 10px;
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+}
+  .bat{
+    margin-top: 30px;
+  }
+.total {
+    margin-bottom: 20px;
+    width: 60%;
+    height: 120px;
+    padding: 10px;
+    margin-left: 210px;
+    font-size: 18px;
+    border: 1px solid rgb(211, 210, 208);
+    border-radius: 10px;
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+    font-size: 25px;
+    font-weight: bold;
+}
+.total div{
+    padding: 5px;
+}
+.spanp{
+    margin-left: 60px;
+}
+.note{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 210px;
+    margin-bottom: 100px;
+}
+
+
+/* predict */
+
+.hp1{
+    margin-left: 170px;
+    padding-top: 50px;
+}
+.hp2{
+   /* margin-left: 170px;*/
+    padding-top: 25px;
+}
+.inp2 {
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 5px;
+    margin-left: 50px;
+    border: 2px solid rgb(129, 126, 122);
+    border-radius: 10px;
+    box-shadow: 1px 3px 8px 0px #bdbdbd;
+}
+.dcell{
+   
+   margin-bottom: 20px;
+    width: 410px;
+    height: 40px;
+    color: rgb(53, 53, 53);
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 18px;
+    border:2px solid rgb(161, 160, 158);
+    border-radius: 10px;
+    box-shadow:1px 1px 1px rgb(160, 160, 158);
+}
+.dsystem{
+   margin-left: 130px;
+    display: inline-block;
+    display: flex;
+
+}
+.dcell2{
+   
+    margin-bottom: 20px;
+     width: 70%;
+     height: 40px;
+     padding: 5px;
+     margin-left: 40px;
+     font-size: 18px;
+     border:2px solid rgb(161, 160, 158);
+     border-radius: 10px;
+     box-shadow:1px 1px 1px rgb(160, 160, 158);
+ }
+ .tabs{
+    display: flex;
+    list-style: none;
+    margin-left: 270px;
+ }
+ .tabs li{
+    font-size: 20px;
+    color: black;
+    border: 1px solid grey;
+    box-shadow:1px 1px 1px rgb(160, 160, 158);
+    border-radius: 15px;
+    width: 300px;
+    padding: 3px;
+    margin : 15px;
+    text-align: center;
+    cursor: pointer;
+ }
+/*.btn1{
+    font-size: 20px;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 15px;
+    width: 300px;
+    padding: 3px;
+    margin : 15px;
+}*/
+.table12{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.active2,.tabs li:hover{
+    background-color: rgb(241, 177, 14);
+    
+}
+.tcontent >div:not(:first-child){
+    display: none;
+}
+/*.active1 {
+    display:block ;
+}*/
+
+
+.defalutButton {
+    background-color: #000;
+    border-radius: 10px;
+    border: unset;
+    padding: 5px 20px;
+    display: inherit;
+    width: fit-content;
+    margin: auto;
+    color: #FFCC00;
+}
+
+
+    .defalutButton:hover {
+        background-color: #FFCC00;
+        color: #000;
+    }
+
+      
